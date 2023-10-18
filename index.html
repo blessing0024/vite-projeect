@@ -16,22 +16,35 @@
     
     <header class="primary-header">
       <div class="container">
-        <!-- logo image -->
-        <a href="#"><img src="images/logo.svg" alt="logo"></a>
-        <!-- nav bar -->
-        <nav class="primary-navigation">
 
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        <div class="nav-wrapper">
 
-        </nav>
+              <!-- logo image -->
+          <a href="#"><img src="images/logo.svg" alt="logo"></a>
 
-        <button class="button">Get Started</button>
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <img class="icon-hamburger" src="images/icon-hamburger.svg" aria-hidden="true">
+            <img class="icon-close" src="images/icon-close.svg" alt=""  aria-hidden="true">
+            <span class="visually-hidden" >Menu</span> 
+          </button>
+          <!-- nav bar -->
+          <nav class="primary-navigation" id="primary-navigation">
+
+            <ul aria-label="Primary" role="list" class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+              <li><a href="#">Service</a></li>
+              
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+          </nav>
+
+          <button class="button | display-sm-none  display-md-inline-flex" >Get Started</button>
+
+        </div>
+        
       </div>
     </header>
 
@@ -39,12 +52,12 @@
     <main>
 
       <!-- section 1 -->
-      <section>
+      <section class="padding-block-900">
         <div class="container">
           <div class="even-columns">
-            <div>
+            <div class="flow">
               <h1 class="fs-primary-heading fw-bold">We bring people together in Ozoro</h1>
-              <p>We give the best tech service and help software teams to plan day-to-day tasks while keeping in touch</p>
+              <p data-width="wide">We give the best tech service and help software teams to plan day-to-day tasks while keeping in touch</p>
               <button class="button">Check Us Out</button>
             </div>
 
@@ -57,12 +70,12 @@
       </section>
 
       <!-- section 2 -->
-      <section>
+      <section  class="padding-block-900">
         <div class="container">
           <div class="even-columns">
-            <div>
+            <div class="flow">
               <h2 class="fs-secondary-heading fw-bold">Why Us?</h2>
-                <p>At Manage, we manage all of your resources 
+                <p data-width="wide">At Manage, we manage all of your resources 
                   and data giving you the best possible outcomes 
                   in all in all of your projects. With our highly 
                   technical skills of data anlyst our result is top 
@@ -71,28 +84,28 @@
             </div>
 
             <div>
-              <ul class="numbered-items" role="list">
+              <ul class="numbered-items | flow" role="list">
 
                 <!-- list of services -->
-                <li>
+                <li class="flow" style="--flow-spacer: 1em">
                   <h3 class="fs-600 fw-bold">Track Company Progress</h3>
-                  <p>See how we manage the projects of 
+                  <p data-width="wide">See how we manage the projects of 
                     clients, increasing their site productivity 
                     with our high SEO skills
                   </p>
                 </li>
 
-                <li>
+                <li class="flow" style="--flow-spacer: 1em">
                   <h3 class="fs-600 fw-bold">Track Company Progress</h3>
-                  <p>See how we manage the projects of 
+                  <p data-width="wide">See how we manage the projects of 
                     clients, increasing their site productivity 
                     with our high SEO skills
                   </p>
                 </li>
 
-                <li>
+                <li class="flow" style="--flow-spacer: 1em">
                   <h3 class="fs-600 fw-bold">Track Company Progress</h3>
-                  <p>See how we manage the projects of 
+                  <p data-width="wide">See how we manage the projects of 
                     clients, increasing their site productivity 
                     with our high SEO skills
                   </p>
@@ -105,7 +118,7 @@
       </section>
 
       <!-- section 3 -->
-      <section class="carousel">
+      <section class="carousel | padding-block-700">
         <h2 class="fs-secondary-heading fw-bold">What Others Say</h2>
         <!--add carousel items here -->
 
@@ -114,13 +127,13 @@
       </section>
 
       <!-- section 4 -->
-      <section class="cta | bg-primary-400 text-neutral-100">
-        <div class="even-columns">
+      <section class="cta |  padding-block-700   bg-accent-400 text-neutral-100">
+        <div class="even-columns vertical-align-center">
           <div>
-            <p class="fs-secondary-heading fw-bold">How Our Team Works Today</p>
+            <p class="fs-secondary-heading fw-bold">How Our Team Works.</p>
           </div>
 
-          <div>
+          <div class="justify-self-end">
             <button class="button" data-type="inverted" >See For Yourself</button>
           </div>
         </div>
@@ -129,7 +142,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="bg-neutral-900 text-neutral-100">
+    <footer class="bg-neutral-900 text-neutral-100   padding-block-700">
       <div class="container">
         <div class="even-columns">
           <div>
@@ -144,19 +157,19 @@
             </a>
           </div>
 
-          <div>
+          <div class="flow">
             <nav class="footer-nav">
               <ul aria-label="Footer" role="list">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">FAQs</a></li>
               </ul>
             </nav>
           </div>
 
-          <div>
+          <div class="flow">
             <form action="">
               <input type="email">
               <button class="button">Sign Up</button>
@@ -168,6 +181,6 @@
 
     </footer>
    
-    <script type="module" src="/main.js"></script>
   </body>
+  <script type="module" src="/main.js"></script>
 </html>
