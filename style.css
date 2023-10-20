@@ -195,6 +195,12 @@ p [data-width="wide"]{
   justify-self: end;
 }
 
+@media (min-width: 50em){
+  .justify-self-end-md{
+    justify-self: end;
+  }
+}
+
 .vertical-align-center{
   align-items: center;
 }
@@ -202,18 +208,43 @@ p [data-width="wide"]{
 .cta{
   position: relative;
   isolation: isolate;
+  text-align: center;
 }
 
-.cta::before{
-  background-image: url('images/bg-tablet-pattern.svg');
-  position: absolute;
-  inset: 0;
-  /* background: red; */
+@media (min-width: 50em){
+  .cta{
+    text-align: left;
+
+  }
+}
+
+.cta::before {
   content: '';
+  background-image: url('images/bg-tablet-pattern.svg'), url('images/bg-tablet-pattern.svg');
+  position: absolute;
+  /* background: red; */
+  inset: 0;
   z-index: -1;
   background-repeat: no-repeat;
-  
+  opacity: 0.2;
+  background-position: -15rem -5rem, 50rem -12rem;
 }
+
+
+/* this is the footer */
+.footer-nav{
+  columns: 2;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+.footer-nav a:is(:hover, :focus){
+  color: var(--clr-accent-300);
+}
+
 
 .button:hover,
 .button:focus-visible{
@@ -278,7 +309,22 @@ p [data-width="wide"]{
 }
 
 
+/* this is for the social list icons */
 
+.social-list{
+  display: flex;
+  gap: var(--size-300);
+}
+
+.icon{
+  width: var(--size-600);
+  fill: var(--clr-neutral-100);
+  
+}
+
+@media (min-width: 50em){
+  
+}
 
 
 
